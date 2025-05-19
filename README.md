@@ -1,14 +1,64 @@
-# Welcome to your CDK TypeScript project
+# Makeen
 
-This is a blank project for CDK development with TypeScript.
+This project is made using AWS CDK application and is written in TypeScript that defines infrastructure as code.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Prerequisites
 
-## Useful commands
+- Node.js (v18 or later)
+- AWS CLI configured with appropriate credentials
+- AWS CDK CLI installed globally (`npm install -g aws-cdk`)
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+## Project Structure
+
+```
+makeen/
+├── bin/                    # CDK app entry point
+├── lib/                    # Stack definitions
+├── lambda/                 # Lambda function code
+├── test/                   # Test files
+└── cdk.out/               # CDK synthesis output
+```
+
+## Getting Started
+
+1. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+2. Build the project:
+
+   ```bash
+   npm run build
+   ```
+
+3. Run tests:
+
+   ```bash
+   npm test
+   ```
+
+4. Deploy the stack:
+
+   ```bash
+   cdk deploy
+   ```
+
+5. Destroy the stack:
+   ```bash
+   cdk destroy MakeenStack
+   ```
+
+## Available Scripts
+
+- `npm run build` - Compiles TypeScript to JavaScript
+- `npm run watch` - Watches for changes and recompiles
+- `npm test` - Runs the test suite
+- `cdk deploy` - Deploys the stack to AWS
+- `cdk diff` - Shows infrastructure changes before deployment
+- `cdk synth` - Synthesizes CloudFormation template
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
